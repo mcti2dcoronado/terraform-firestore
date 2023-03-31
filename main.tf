@@ -1,7 +1,9 @@
 #readme
 #CREATE A FIRESTORE NATIVE DATABASE
 provider "google" {
-  credentials = file("credentials.json")
+  project	= "montreal-project-mcit"
+  region	= "northamerica-northeast1"
+  zone		= "northamerica-northeast1-a"
 }
 
 resource "google_firestore_database" "database" {

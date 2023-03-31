@@ -15,7 +15,7 @@ resource "time_sleep" "wait_60_seconds" {
   create_duration = "60s"
 }
 
-resource "gogle_project_service" "firestore" {
+resource "google_project_service" "firestore" {
   project 	= google_project.project.project_id
   service 	= "firestore.googleapis.com"
 

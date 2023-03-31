@@ -5,8 +5,14 @@ provider "google" {
   zone		= "northamerica-northeast1-a"
 }
 
+resource "random_string" "random_suffix" {
+  length  = 3
+  special = false
+  upper   = false
+}
+
 resource "google_project" "project" {
-  project_id	= "project-firestore-mtl-%{random_suffix}"
+  project_id	= "project-firestore-mtl-${random_string.random_suffix.result}"
   name		= "project-firestore-mtl"
 }
 

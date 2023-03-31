@@ -8,7 +8,7 @@ provider "google" {
 
 resource "google_firestore_database" "database" {
   project     = "montreal-project-mcit"
-  name        = "(default)"
+  name        = "mtl-firestore"
   location_id = "northamerica-northeast1"
   type        = "FIRESTORE_NATIVE"
 }

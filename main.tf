@@ -3,7 +3,6 @@
 provider "google" {
   region	= "northamerica-northeast1"
   zone		= "northamerica-northeast1-a"
-  org_id        = "123456789"
 }
 
 resource "random_string" "random_suffix" {
@@ -15,6 +14,7 @@ resource "random_string" "random_suffix" {
 resource "google_project" "project" {
   project_id	= "project-firestore-mtl-${random_string.random_suffix.result}"
   name		= "project-firestore-mtl"
+  org_id        = "123456789"
 }
 
 resource "time_sleep" "wait_60_seconds" {

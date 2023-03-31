@@ -14,7 +14,7 @@ resource "random_string" "random_suffix" {
 resource "google_project" "project" {
   project_id	= "project-firestore-mtl-${random_string.random_suffix.result}"
   name		= "project-firestore-mtl"
-  org_id        = "123456789"
+  org_id        = "0"
 }
 
 resource "time_sleep" "wait_60_seconds" {
